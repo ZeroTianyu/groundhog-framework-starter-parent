@@ -28,6 +28,10 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-security</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.groundhog</groupId>
+            <artifactId>groundhog-framework-base-starter</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

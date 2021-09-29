@@ -25,6 +25,7 @@
         <spring-cloud-alibaba.version>2.2.2.RELEASE</spring-cloud-alibaba.version>
         <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
         <lombok.version>1.18.20</lombok.version>
+        <spring-cloud-openfeign.version>3.0.3</spring-cloud-openfeign.version>
     </properties>
 
     <dependencies>
@@ -55,7 +56,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            
+
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
@@ -95,6 +96,11 @@
                 <groupId>com.groundhog</groupId>
                 <artifactId>groundhog-framework-tools-starter</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${spring-cloud-openfeign.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
