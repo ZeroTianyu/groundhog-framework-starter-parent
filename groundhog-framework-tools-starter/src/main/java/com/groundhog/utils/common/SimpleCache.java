@@ -9,7 +9,9 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 /**
  * describe:  本地简单缓存对象，无超时实现，使用{@link WeakHashMap}实现缓存自动清理
  * version 1.0
- * Created by hot.sun on 2018/4/23 .
+ *
+ * @author hot.sun
+ * @date 2018/4/23
  *
  * @param <K> 键类型
  * @param <V> 值类型

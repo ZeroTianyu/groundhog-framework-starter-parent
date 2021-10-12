@@ -33,22 +33,6 @@ public class OauthUserAccount extends GroundhogBaseEntity {
     private String userType;
 
     /**
-     * 账号类型
-     */
-    private String accountType;
-
-    /**
-     * 账号前缀
-     */
-    private String account;
-
-    /**
-     * 账号密文
-     */
-    private String accountFull;
-
-
-    /**
      * 密码（BCrypt）
      */
     private String password;
@@ -58,10 +42,6 @@ public class OauthUserAccount extends GroundhogBaseEntity {
      */
     private Boolean status;
 
-    /**
-     * 账号对应名称
-     */
-    private String accountName;
 
 
 }

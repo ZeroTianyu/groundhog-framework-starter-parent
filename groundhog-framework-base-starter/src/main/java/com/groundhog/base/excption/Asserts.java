@@ -182,7 +182,7 @@ public final class Asserts {
         return object;
     }
 
-    public final static <T> T isNotNull(T object, AbstractCrispsException exception) throws GroundhogBizException {
+    public final static <T> T isNotNull(T object, AbstractGroundhogException exception) throws GroundhogBizException {
         if (object == null) {
             throw exception;
         }
@@ -280,7 +280,7 @@ public final class Asserts {
         return text;
     }
 
-    public final static String isNotBlank(String text, AbstractCrispsException exception) throws GroundhogBizException {
+    public final static String isNotBlank(String text, AbstractGroundhogException exception) throws GroundhogBizException {
         if (blank(text)) {
             throw exception;
         }

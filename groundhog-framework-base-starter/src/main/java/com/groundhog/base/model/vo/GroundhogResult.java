@@ -15,7 +15,7 @@ public class GroundhogResult<T> {
     private boolean success;
     private T data;
 
-    protected GroundhogResult() {
+    public GroundhogResult() {
     }
 
     protected GroundhogResult(long code, String message, boolean success, T data) {

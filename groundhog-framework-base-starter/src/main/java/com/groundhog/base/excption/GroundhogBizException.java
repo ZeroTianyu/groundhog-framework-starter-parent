@@ -8,7 +8,7 @@ import java.text.MessageFormat;
  * @Description: 公共异常类
  * @Author Created by yan.x on 2019-07-27 .
  **/
-public class GroundhogBizException extends AbstractCrispsException {
+public class GroundhogBizException extends AbstractGroundhogException {
 
     private int code = 500;
     private String message;
