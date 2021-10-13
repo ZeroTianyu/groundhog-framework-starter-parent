@@ -12,7 +12,7 @@ public interface IErrorCode {
      *
      * @return
      */
-    Integer getCode();
+    int getCode();
 
     /**
      * 获取错误信息

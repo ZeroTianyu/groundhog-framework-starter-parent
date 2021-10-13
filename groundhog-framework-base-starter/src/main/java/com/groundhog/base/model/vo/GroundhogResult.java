@@ -10,7 +10,7 @@ import lombok.Data;
  */
 @Data
 public class GroundhogResult<T> {
-    private long code;
+    private int code;
     private String message;
     private boolean success;
     private T data;
@@ -18,7 +18,7 @@ public class GroundhogResult<T> {
     public GroundhogResult() {
     }
 
-    protected GroundhogResult(long code, String message, boolean success, T data) {
+    protected GroundhogResult(int code, String message, boolean success, T data) {
         this.code = code;
         this.message = message;
         this.success = success;
@@ -37,11 +37,18 @@ public class GroundhogResult<T> {
 
     /**
      * 成功返回结果
-     *
      */
     public static <T> GroundhogResult<T> success() {
         return new GroundhogResult<T>(ResultCode.SUCCESS.getCode(), ResultCode.SUCCESS.getMessage(), ResultCode.SUCCESS.getSuccess(), null);
     }
+
+    /**
+     * 设置返回结果
+     */
+    public <T> GroundhogResult<T> setResult(ResultCode resultCode) {
+        return new GroundhogResult<T>(resultCode.getCode(), resultCode.getMessage(),resultCode.getSuccess(), null);
+    }
+
 
     /**
      * 成功返回结果
@@ -71,6 +78,27 @@ public class GroundhogResult<T> {
     public static <T> GroundhogResult<T> failed(IErrorCode errorCode, String message) {
         return new GroundhogResult<T>(errorCode.getCode(), message, errorCode.getSuccess(), null);
     }
+
+    /**
+     * 失败返回结果
+     *
+     * @param code    错误码
+     * @param message 错误信息
+     */
+    public static <T> GroundhogResult<T> failed(int code, String message) {
+        return new GroundhogResult<T>(code, message, false, null);
+    }
+
+    /**
+     * 失败返回结果
+     *
+     * @param code    错误码
+     * @param message 错误信息
+     */
+    public static <T> GroundhogResult<T> failed(int code, String message,boolean success) {
+        return new GroundhogResult<T>(code, message, false, null);
+    }
+
 
     /**
      * 失败返回结果

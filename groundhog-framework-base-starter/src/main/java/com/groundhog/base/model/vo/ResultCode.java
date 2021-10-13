@@ -106,8 +106,9 @@ public enum ResultCode implements IErrorCode {
         this.success = success;
     }
 
+
     @Override
-    public Integer getCode() {
+    public int getCode() {
         return code;
     }
 
