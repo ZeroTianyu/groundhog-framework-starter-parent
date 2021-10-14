@@ -18,7 +18,7 @@ public class GroundhogResult<T> {
     public GroundhogResult() {
     }
 
-    protected GroundhogResult(int code, String message, boolean success, T data) {
+    public GroundhogResult(int code, String message, boolean success, T data) {
         this.code = code;
         this.message = message;
         this.success = success;
@@ -45,8 +45,10 @@ public class GroundhogResult<T> {
     /**
      * 设置返回结果
      */
-    public <T> GroundhogResult<T> setResult(ResultCode resultCode) {
-        return new GroundhogResult<T>(resultCode.getCode(), resultCode.getMessage(),resultCode.getSuccess(), null);
+    public void setResult(ResultCode resultCode) {
+        this.setCode(resultCode.getCode());
+        this.setMessage(resultCode.getMessage());
+        this.setSuccess(resultCode.getSuccess());
     }
 
 
